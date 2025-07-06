@@ -1,8 +1,6 @@
 // Name: Nephat Gikunju
 // Date: 2025-07-03
 
-// Part 2: Code Transformations
-
 // Given Procedural Code:
 const radius = 7;
 
@@ -101,6 +99,3 @@ class ToDoList {
     console.log("---------------------");
   }
 }
-
-// Try to mark a non-existent task
-myTodoList.markTaskComplete("Go to gym");
