@@ -1,5 +1,3 @@
-// Name: Nephat Gikunju
-// Date: 2025-07-03
 
 // Given Procedural Code:
 const radius = 7;
