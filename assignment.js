@@ -1,3 +1,7 @@
+// Name: Your Name
+// Date: 2025-07-03
+
+// Part 2: Code Transformations
 
 // Given Procedural Code:
 const radius = 7;
@@ -24,12 +28,14 @@ const myCircle = new Circle(7);
 console.log("\nOOP Output:");
 console.log(myCircle.getCircumference());
 
+// Example with a different circle
 const anotherCircle = new Circle(10);
 console.log(anotherCircle.getCircumference());
 
 
 // 2B. Rewrite using Functional Programming
 
+// Pure function: takes input, returns output, no side effects, always same output for same input
 const calculateCircumferencePure = (r) => {
   return 2 * Math.PI * r;
 };
@@ -46,7 +52,7 @@ console.log(circumferences); // Expected: array of circumferences
 class Task {
   constructor(description) {
     this.description = description;
-    this.completed = false; 
+    this.completed = false; // Tasks start as incomplete
   }
 
   markComplete() {
@@ -54,6 +60,7 @@ class Task {
     console.log(`Task "${this.description}" marked as complete.`);
   }
 
+  // Optional: A method to display the task's status
   getStatus() {
     return this.completed ? "[x] " + this.description : "[ ] " + this.description;
   }
@@ -61,14 +68,14 @@ class Task {
 
 class ToDoList {
   constructor() {
-    this.tasks = []; 
+    this.tasks = []; // Encapsulates the list of tasks
   }
 
   addTask(description) {
     const newTask = new Task(description);
     this.tasks.push(newTask);
     console.log(`Added task: "${description}"`);
-    return newTask; 
+    return newTask; // Return the task object in case it's needed
   }
 
   markTaskComplete(taskDescription) {
@@ -97,3 +104,25 @@ class ToDoList {
     console.log("---------------------");
   }
 }
+
+// --- Usage Example ---
+const myTodoList = new ToDoList();
+
+myTodoList.addTask("Buy groceries");
+myTodoList.addTask("Walk the dog");
+myTodoList.addTask("Finish programming assignment");
+myTodoList.listAllTasks();
+
+myTodoList.markTaskComplete("Walk the dog");
+myTodoList.listAllTasks();
+
+myTodoList.addTask("Call mom");
+myTodoList.printPendingTasksCount();
+
+myTodoList.markTaskComplete("Buy groceries");
+myTodoList.printPendingTasksCount();
+
+myTodoList.listAllTasks();
+
+// Try to mark a non-existent task
+myTodoList.markTaskComplete("Go to gym");
