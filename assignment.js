@@ -1,7 +1,3 @@
-// Name: Your Name
-// Date: 2025-07-03
-
-// Part 2: Code Transformations
 
 // Given Procedural Code:
 const radius = 7;
@@ -28,14 +24,10 @@ const myCircle = new Circle(7);
 console.log("\nOOP Output:");
 console.log(myCircle.getCircumference());
 
-// Example with a different circle
-const anotherCircle = new Circle(10);
-console.log(anotherCircle.getCircumference());
 
 
 // 2B. Rewrite using Functional Programming
 
-// Pure function: takes input, returns output, no side effects, always same output for same input
 const calculateCircumferencePure = (r) => {
   return 2 * Math.PI * r;
 };
@@ -44,7 +36,7 @@ const radii = [3, 5, 7];
 
 console.log("\nFunctional Programming Output:");
 const circumferences = radii.map(calculateCircumferencePure);
-console.log(circumferences); // Expected: array of circumferences
+console.log(circumferences); 
 
 
 // Part 4A: To-Do List Manager using Object-Oriented Programming (OOP)
@@ -52,7 +44,7 @@ console.log(circumferences); // Expected: array of circumferences
 class Task {
   constructor(description) {
     this.description = description;
-    this.completed = false; // Tasks start as incomplete
+    this.completed = false; 
   }
 
   markComplete() {
@@ -60,7 +52,6 @@ class Task {
     console.log(`Task "${this.description}" marked as complete.`);
   }
 
-  // Optional: A method to display the task's status
   getStatus() {
     return this.completed ? "[x] " + this.description : "[ ] " + this.description;
   }
@@ -68,14 +59,14 @@ class Task {
 
 class ToDoList {
   constructor() {
-    this.tasks = []; // Encapsulates the list of tasks
+    this.tasks = []; 
   }
 
   addTask(description) {
     const newTask = new Task(description);
     this.tasks.push(newTask);
     console.log(`Added task: "${description}"`);
-    return newTask; // Return the task object in case it's needed
+    return newTask; 
   }
 
   markTaskComplete(taskDescription) {
@@ -105,24 +96,21 @@ class ToDoList {
   }
 }
 
-// --- Usage Example ---
 const myTodoList = new ToDoList();
 
-myTodoList.addTask("Buy groceries");
-myTodoList.addTask("Walk the dog");
+myTodoList.addTask("prepare for the cats");
+myTodoList.addTask("work on campus assignments");
 myTodoList.addTask("Finish programming assignment");
 myTodoList.listAllTasks();
 
-myTodoList.markTaskComplete("Walk the dog");
+myTodoList.markTaskComplete("work on campus assignment");
 myTodoList.listAllTasks();
 
-myTodoList.addTask("Call mom");
+myTodoList.addTask("Finish programming assignment");
 myTodoList.printPendingTasksCount();
 
-myTodoList.markTaskComplete("Buy groceries");
+myTodoList.markTaskComplete("prepare for the cats");
 myTodoList.printPendingTasksCount();
 
 myTodoList.listAllTasks();
 
-// Try to mark a non-existent task
-myTodoList.markTaskComplete("Go to gym");
