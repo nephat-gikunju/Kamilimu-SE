@@ -25,5 +25,5 @@ else if (order ==="tea"){
 
 }
 else {
-    console.log("get out")
+    console.log("cant understand your request")
 }
